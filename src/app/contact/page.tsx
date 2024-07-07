@@ -1,18 +1,9 @@
-'use client';
-
 import Link from 'next/link';
 import Arrow from '../components/DirectionKeys';
 import styles from './styles.module.scss';
 import React from 'react';
 
-const HomePage = () => {
-	const handleLeftClick = () => {
-		console.log('Left arrow clicked');
-	};
-
-	const handleRightClick = () => {
-		console.log('Right arrow clicked');
-	};
+const Contact = () => {
 	return (
 		<div className={styles.container}>
 			<img
@@ -21,7 +12,9 @@ const HomePage = () => {
 				className={styles.backgroundImage}
 			/>
 			<header className={styles.header}>
-				<img src="/logo.png" alt="Craft Industrial" className={styles.logo} />
+				<Link href="/" className={styles.navItem}>
+					<img src="/logo.png" alt="Craft Industrial" className={styles.logo} />
+				</Link>
 				<nav className={styles.nav}>
 					<Link href="/about" className={styles.navItem}>
 						ABOUT US
@@ -39,8 +32,6 @@ const HomePage = () => {
 			</header>
 			<main className={styles.main}>
 				<div className={styles.overlay}>
-					<Arrow direction="left" onClick={handleLeftClick} />
-					<Arrow direction="right" onClick={handleRightClick} />
 					<h1 className={styles.title}>Welcome to Craft Industrial</h1>
 					<p className={styles.subtitle}>
 						Craf Industrial was established to manufacture and supply high
@@ -56,4 +47,4 @@ const HomePage = () => {
 	);
 };
 
-export default HomePage;
+export default Contact;
