@@ -1,0 +1,40 @@
+.arrow {
+	position: absolute;
+	top: 80%;
+	transform: translateY(-50%);
+	width: 40px;
+	height: 40px;
+	background-color: #1e90ff; /* Mavi arka plan rengi */
+	border: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	outline: none;
+}
+
+.arrow::before {
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+}
+
+.arrowLeft::before {
+	border-width: 10px 15px 10px 0;
+	border-color: transparent white transparent transparent;
+}
+
+.arrowRight::before {
+	border-width: 10px 0 10px 15px;
+	border-color: transparent transparent transparent white;
+}
+
+.arrowLeft {
+	left: 10px;
+}
+
+.arrowRight {
+	right: 10px;
+}
