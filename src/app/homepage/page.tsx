@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Arrow from '../components/DirectionKeys';
 import styles from './styles.module.scss';
 import React from 'react';
+import Button from '../components/buttons';
+import NavBar from '../components/navBar';
 
 const HomePage = () => {
 	const handleLeftClick = () => {
@@ -15,28 +17,7 @@ const HomePage = () => {
 	};
 	return (
 		<div className={styles.container}>
-			<img
-				src="/gear-close-up.png"
-				alt="Background"
-				className={styles.backgroundImage}
-			/>
-			<header className={styles.header}>
-				<img src="/logo.png" alt="Craft Industrial" className={styles.logo} />
-				<nav className={styles.nav}>
-					<Link href="/about" className={styles.navItem}>
-						ABOUT US
-					</Link>
-					<Link href="/product" className={styles.navItem}>
-						PRODUCT
-					</Link>
-					<Link href="/services" className={styles.navItem}>
-						SERVICES
-					</Link>
-					<Link href="/contact" className={styles.navItem}>
-						CONTACT
-					</Link>
-				</nav>
-			</header>
+			<NavBar />
 			<main className={styles.main}>
 				<div className={styles.overlay}>
 					<Arrow direction="left" onClick={handleLeftClick} />
@@ -49,7 +30,7 @@ const HomePage = () => {
 						long-lasting solutions to meet the production demands of an
 						ever-changing business environment.
 					</p>
-					<button className={styles.contactButton}>CONTACT NOW</button>
+					<Button text="CONTACT NOW" />
 				</div>
 			</main>
 		</div>
