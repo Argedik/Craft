@@ -29,7 +29,7 @@
 }
 
 .navItem {
-	color: #000;
+	color: #01303b;
 	text-decoration: none;
 	cursor: pointer;
 	font-weight: bold;
@@ -56,18 +56,18 @@
 }
 
 .title {
-	color: #fff;
+	color: #01303b;
 	font-size: 3rem;
 	margin: 0;
 }
 
 .subtitle {
-	color: #fff;
+	color: #01303b;
 	margin: 20px 0;
 }
 
 .contactButton {
-	background-color: transparent;
+	background-color: #01303b;
 	color: #fff;
 	padding: 0.4rem 0.4rem;
 	border: none;
@@ -75,12 +75,13 @@
 	font-size: 1rem;
 	font-weight: 900;
 	border-radius: 5px;
-	border: 1px solid #fff;
+	width: 100%;
+	border: 1px solid #01303b;
 }
 
 .contactButton:hover {
 	background-color: #fff;
-	color: #000;
+	color: #01303b;
 }
 
 .backgroundImage {
@@ -108,7 +109,7 @@
 
 .formContainer {
 	width: 45%;
-	color: black;
+	color: 01303B;
 
 	h1 {
 		font-size: 2rem;
@@ -121,15 +122,20 @@
 
 .contactInfo {
 	width: 45%;
-	color: black;
+	color: 01303B;
 }
 
 .input,
 .textarea {
 	margin-bottom: 10px;
-	padding: 10px;
-	font-size: 1rem;
+	padding: 1rem;
+	font-size: 0.5rem;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	margin-right: 1rem;
+	width: 100%;
+	display: flex;
+	justify-content: start;
+	align-items: start;
+	height: 5rem;
 }
