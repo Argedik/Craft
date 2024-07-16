@@ -43,9 +43,8 @@
 	flex: 1;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 	position: relative;
-	justify-content: left;
 	padding: 4rem;
 }
 
@@ -105,4 +104,32 @@
 		width: 45%; /* 2 öğenin yan yana gelmesi için */
 		text-align: center;
 	}
+}
+
+.formContainer {
+	width: 45%;
+	color: black;
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	p {
+		margin-bottom: 1.25rem;
+	}
+}
+
+.contactInfo {
+	width: 45%;
+	color: black;
+}
+
+.input,
+.textarea {
+	margin-bottom: 10px;
+	padding: 10px;
+	font-size: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-right: 1rem;
 }
