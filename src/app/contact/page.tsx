@@ -2,6 +2,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import NavBar from '../components/navBar';
+import TextInput from '../components/form/textInput';
 
 const ContactForm: React.FC = () => {
 	return (
@@ -12,37 +13,25 @@ const ContactForm: React.FC = () => {
 					<h1>Get in Touch</h1>
 					<p>one step closer to discovering products</p>
 					<form className={styles.form}>
-						<input
-							type="text"
-							name="name"
-							placeholder="Name"
+						<TextInput name="Name" forName="name" required />
+						<TextInput name="Surname" forName="surname" required />
+						<TextInput
+							name="Email"
+							forName="email"
+							inputType="email"
 							required
-							className={styles.input}
 						/>
-						<input
-							type="text"
-							name="surname"
-							placeholder="Surname"
+						<TextInput name="Phone" forName="phone" inputType="tel" required />
+						<TextInput
+							name="Message"
+							forName="message"
+							inputType="tel"
+							verticalTextInput
 							required
-							className={styles.input}
-						/>
-						<input
-							type="email"
-							name="email"
-							placeholder="E-Mail"
-							required
-							className={styles.input}
-						/>
-						<input
-							type="tel"
-							name="phone"
-							placeholder="Phone"
-							required
-							className={styles.input}
 						/>
 						<textarea
 							name="message"
-							placeholder="Message"
+							placeholder=""
 							required
 							className={styles.textarea}
 						></textarea>

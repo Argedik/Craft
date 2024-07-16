@@ -1,0 +1,45 @@
+.container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.label {
+	flex: 1;
+	min-width: 100px; /* Adjust this as needed */
+	padding: 0.25rem;
+	background-color: #f0f0f0;
+	border-radius: 5px;
+	margin-right: 10px;
+	font-weight: bolder;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+.input {
+	flex: 3;
+	padding: 0.25rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	height: 2rem;
+	box-sizing: border-box;
+}
+
+.verticalTextInput {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 1rem;
+}
+
+.textarea {
+	flex: 4;
+	padding: 0.25rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	height: 7rem;
+	font-size: medium;
+	box-sizing: border-box;
+}
