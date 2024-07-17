@@ -12,8 +12,8 @@ const ContactForm: React.FC = () => {
 			<main className={styles.main}>
 				<div className={styles.formContainer}>
 					<div>
-						<h1 style={{ color: '#000' }}>Get in Touch</h1>
-						<p style={{ color: '#000' }}>
+						<h1 style={{ color: '#01303B' }}>Get in Touch</h1>
+						<p style={{ color: '#01303B' }}>
 							one step closer to discovering products
 						</p>
 						<form className={styles.form}>
@@ -44,7 +44,7 @@ const ContactForm: React.FC = () => {
 							</button>
 						</form>
 					</div>
-					<div className={styles.contactInfo} style={{ color: '#000' }}>
+					<div className={styles.contactInfo} style={{ color: '#01303B' }}>
 						<div>
 							<h2>Adress</h2>
 							<address>
