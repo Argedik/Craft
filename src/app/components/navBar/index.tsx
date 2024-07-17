@@ -2,14 +2,22 @@ import React from 'react';
 import Link from 'next/link';
 import styles from './styles.module.scss';
 
-const NavBar = () => {
+interface navBarProps {
+	noImage?: boolean;
+}
+
+const NavBar: React.FC<navBarProps> = ({ noImage }) => {
 	return (
 		<>
-			<img
-				src="/gear-close-up.png"
-				alt="Background"
-				className={styles.backgroundImage}
-			/>
+			{noImage ? (
+				''
+			) : (
+				<img
+					src="/gear-close-up.png"
+					alt="Background"
+					className={styles.backgroundImage}
+				/>
+			)}
 			<header className={styles.header}>
 				<Link href="/" className={styles.navItem}>
 					<img src="/logo.png" alt="Craft Industrial" className={styles.logo} />

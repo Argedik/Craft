@@ -52,7 +52,6 @@ const TextInput: React.FC<textInputProps> = ({
 					/>
 				</>
 			)}
-			)
 		</label>
 	);
 };
