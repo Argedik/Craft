@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Arrow from '../components/DirectionKeys';
 import styles from './styles.module.scss';
@@ -6,12 +8,15 @@ import NavBar from '../components/navBar';
 import Button from '../components/buttons';
 
 const Product = () => {
+	function hundleClick() {
+		console.log('test');
+	}
 	return (
 		<div className={styles.container}>
 			<NavBar />
 			<main className={styles.main}>
 				<div className={styles.productContainer}>
-					<div className={styles.product}>
+					<div className={styles.product} onClick={() => hundleClick()}>
 						<div className={styles.productTitle}>AIR WIPES</div>
 						<img
 							src="/Rectangle17.png"
