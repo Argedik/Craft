@@ -13,7 +13,7 @@ const Product = () => {
 	}
 	return (
 		<div className={styles.container}>
-			<NavBar noImage />
+			<NavBar />
 			<main className={styles.main}>
 				<div className={styles.productContainer}>
 					<div className={styles.product} onClick={() => hundleClick()}>

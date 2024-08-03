@@ -46,7 +46,7 @@
 	justify-content: center;
 	position: relative;
 	justify-content: left;
-	padding: 1rem;
+	padding: 4rem;
 	flex-wrap: wrap;
 }
 
@@ -106,37 +106,29 @@
 		width: 45%; /* 2 öğenin yan yana gelmesi için */
 		text-align: center;
 	}
-	.productContainer {
-		display: flex;
-		flex: 0 0 100%;
-	}
 }
 
 .productContainer {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	width: 100%;
 	margin-bottom: 2rem;
 }
 
 .product {
-	flex: 0 0 45%;
-	margin: 0.5rem;
-	padding: 1rem;
 	text-align: center;
-	background-color: #fff;
-}
-
-.productTitle {
-	font-weight: bold;
-	font-size: 1.2rem;
+	flex: 1;
 }
 
 .productImage {
 	max-width: 100%;
 	height: auto;
 	margin-bottom: 1rem;
+}
+
+.productTitle {
+	font-weight: bold;
+	font-size: 1.2rem;
 }
 
 .customMachines {
