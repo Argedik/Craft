@@ -48,6 +48,7 @@
 	justify-content: left;
 	padding: 1rem;
 	flex-wrap: wrap;
+	align-items: start;
 }
 
 .overlay {
@@ -126,6 +127,9 @@
 	padding: 1rem;
 	text-align: center;
 	background-color: #fff;
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
 }
 
 .productTitle {

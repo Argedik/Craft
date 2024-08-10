@@ -6,6 +6,7 @@ import styles from './styles.module.scss';
 import React from 'react';
 import NavBar from '../components/navBar';
 import Button from '../components/buttons';
+import ProductTitle from '../components/product/productTitle';
 
 const Product = () => {
 	function hundleClick() {
@@ -17,7 +18,7 @@ const Product = () => {
 			<main className={styles.main}>
 				<div className={styles.productContainer}>
 					<div className={styles.product} onClick={() => hundleClick()}>
-						<div className={styles.productTitle}>AIR WIPES</div>
+						<ProductTitle text="AIR WIPES" />
 						<img
 							src="/Rectangle17.png"
 							alt="Air Wipes"
@@ -25,7 +26,7 @@ const Product = () => {
 						/>
 					</div>
 					<div className={styles.product}>
-						<div className={styles.productTitle}>BLADES</div>
+						<ProductTitle text="BLADES" />
 						<img
 							src="/Rectangle18.png"
 							alt="Blades"
@@ -33,7 +34,7 @@ const Product = () => {
 						/>
 					</div>
 					<div className={styles.product}>
-						<div className={styles.productTitle}>STANDS</div>
+						<ProductTitle text="STANDS" />
 						<img
 							src="/Rectangle19.png"
 							alt="Stands"
@@ -41,7 +42,7 @@ const Product = () => {
 						/>
 					</div>
 					<div className={styles.product}>
-						<div className={styles.productTitle}>WELDERS</div>
+						<ProductTitle text="WELDERS" />
 						<img
 							src="/Rectangle20.png"
 							alt="Welders"

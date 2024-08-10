@@ -8,5 +8,5 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ className, text }) => {
 	return <button className={styles.contactButton}>{text}</button>;
 };
-
+//buraya renklere göre buton şeklinde koşul ekle
 export default Button;
