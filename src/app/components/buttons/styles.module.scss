@@ -1,3 +1,5 @@
+@import '../../globals.scss';
+
 .normalButton {
 	background-color: transparent;
 	color: #fff;
@@ -13,4 +15,9 @@
 .normalButton:hover {
 	background-color: #fff;
 	color: #000;
+}
+
+.contactButton {
+	padding: 0.25rem;
+	border: 0.25rem solid $craft-color;
 }

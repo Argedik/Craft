@@ -15,7 +15,7 @@ const Product = () => {
 	return (
 		<div className={styles.container}>
 			<NavBar noImage />
-			<main className={styles.main}>
+			<main className={`productPage ${styles.productPage}`}>
 				<div className={styles.productContainer}>
 					<div className={styles.product} onClick={() => hundleClick()}>
 						<ProductTitle text="AIR WIPES" />
