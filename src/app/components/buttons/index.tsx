@@ -7,7 +7,9 @@ interface ButtonProps {
 }
 const Button: React.FC<ButtonProps> = ({ className, text }) => {
 	return (
-		<button className={`${styles.contactButton} productButton `}>{text}</button>
+		<button className={`${styles.contactButton} productButton `}>
+			<p></p>
+		</button>
 	);
 };
 //buraya renklere göre buton şeklinde koşul ekle

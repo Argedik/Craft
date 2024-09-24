@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-$light-blue: #add8e6;
-$sky-blue: #87ceeb;
-$cobalt-blue: #0047ab;
-$royal-blue: #4169e1;
-$navy: #000080;
-$sea-blue: #2e8b57;
-$teal: #008080;
-$turquoise: #40e0d0;
-$dark-blue: #00008b;
-$craft-color: #01303b;
+@import './_variables';
 
 * {
 	box-sizing: border-box;
