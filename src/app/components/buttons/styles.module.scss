@@ -1,23 +1,35 @@
 @import '@styles/_variables';
 
-.normalButton {
-	background-color: transparent;
-	color: #fff;
-	padding: 0.4rem 0.4rem;
-	border: none;
-	cursor: pointer;
-	font-size: 1rem;
-	font-weight: 900;
-	border-radius: 5px;
-	border: 1px solid #fff;
-}
+// .normalButton {
+// 	background-color: transparent;
+// 	color: #fff;
+// 	padding: 0.4rem 0.4rem;
+// 	border: none;
+// 	cursor: pointer;
+// 	font-size: 1rem;
+// 	font-weight: 900;
+// 	border-radius: 5px;
+// 	border: 1px solid #fff;
+// }
 
-.normalButton:hover {
-	background-color: #fff;
-	color: #000;
-}
+// .normalButton:hover {
+// 	background-color: #fff;
+// 	color: #000;
+// }
 
 .contactButton {
-	padding: 0.25rem;
 	border: 0.25rem solid $craft-color;
+	cursor: pointer;
+	border-radius: 0.5rem;
+	background-color: $craft-color;
+	padding: 0;
+	margin: 0;
+}
+
+.buttonText {
+	color: white;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 0 2.5rem;
+	line-height: 0;
 }

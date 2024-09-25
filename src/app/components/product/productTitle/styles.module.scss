@@ -1,8 +1,11 @@
+@import '@styles/_variables';
+
 .productTitle {
-	font-weight: bold;
 	font-size: 1.2rem;
-	background-color: black;
-	border-radius: 1rem;
+	font-weight: bold;
+	background-color: $craft-color;
+	border-radius: 0.5rem;
 	color: white;
 	line-height: normal;
+	padding: 0.25rem 0;
 }
