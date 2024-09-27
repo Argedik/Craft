@@ -24,7 +24,7 @@ const HomePage = () => {
 					<Arrow direction="right" onClick={handleRightClick} />
 					<h1 className={styles.title}>Welcome to Craft Industrial</h1>
 					<p className={styles.subtitle}>
-						Craf Industrial was established to manufacture and supply high
+						Craft Industrial was established to manufacture and supply high
 						quality machines and auxiliary equipment to industrial companies.
 						You can trust Craft Industrial to deliver low-cost, durable and
 						long-lasting solutions to meet the production demands of an
