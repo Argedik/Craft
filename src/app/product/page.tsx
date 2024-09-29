@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-import Arrow from '../components/DirectionKeys';
 import styles from './styles.module.scss';
 import React from 'react';
 import NavBar from '../components/navBar';
