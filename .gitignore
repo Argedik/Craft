@@ -37,3 +37,4 @@ next-env.d.ts
 
 compose.yaml
 .env
+package-lock.json
