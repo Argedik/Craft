@@ -1,11 +1,55 @@
+'use client';
+
 // components/ContactForm.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './styles.module.scss';
 import NavBar from '../components/navBar';
 import TextInput from '../components/form/textInput';
 import Button from '../components/buttons';
 
 const ContactForm: React.FC = () => {
+	const [formData, setFormData] = useState({
+		name: '',
+		surname: '',
+		email: '',
+		phone: '',
+		message: '',
+	});
+
+	const handleChange = (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value,
+		});
+	};
+
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+
+		const response = await fetch('/api/contact', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(formData),
+		});
+
+		if (response.ok) {
+			alert('Mesajınız başarıyla gönderildi.');
+			setFormData({
+				name: '',
+				surname: '',
+				email: '',
+				phone: '',
+				message: '',
+			});
+		} else {
+			alert('Mesaj gönderilirken bir hata oluştu.');
+		}
+	};
+
 	return (
 		<div className={styles.container}>
 			<NavBar noImage />
@@ -16,28 +60,44 @@ const ContactForm: React.FC = () => {
 						<p style={{ color: '#01303B' }}>
 							one step closer to discovering products
 						</p>
-						<form className={styles.form}>
-							<TextInput name="Name" forName="name" required />
-							<TextInput name="Surname" forName="surname" required />
+						<form className={styles.form} onSubmit={handleSubmit}>
+							<TextInput
+								name="Name"
+								forName="name"
+								required
+								value={formData.name}
+								onChange={handleChange}
+							/>
+							<TextInput
+								name="Surname"
+								forName="surname"
+								required
+								value={formData.surname}
+								onChange={handleChange}
+							/>
 							<TextInput
 								name="Email"
 								forName="email"
 								inputType="email"
 								required
+								value={formData.email}
+								onChange={handleChange}
 							/>
 							<TextInput
 								name="Phone"
 								forName="phone"
 								inputType="tel"
-								required
+								value={formData.phone}
+								onChange={handleChange}
 							/>
 							<TextInput
 								name="Message"
 								forName="message"
-								inputType="tel"
+								inputType="message"
 								verticalTextInput
-								required
 								className={styles.textarea}
+								value={formData.message}
+								onChange={handleChange}
 							/>
 							<button type="submit" className={styles.contactButton}>
 								Send
