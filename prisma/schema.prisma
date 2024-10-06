@@ -17,9 +17,10 @@ model Mail {
   id      Int     @id @default(autoincrement())
   name    String
   surname String
-  email   String
+  email   String  @unique
   phone   String
   message String
 
+  @@unique([name, surname, email])
   @@map("mails")
 }

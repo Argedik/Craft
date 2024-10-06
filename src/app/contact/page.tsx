@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
 					<div>
 						<h1 style={{ color: '#01303B' }}>Get in Touch</h1>
 						<p style={{ color: '#01303B' }}>
-							one step closer to discovering products
+							One step closer to discovering products
 						</p>
 						<form className={styles.form} onSubmit={handleSubmit}>
 							<TextInput

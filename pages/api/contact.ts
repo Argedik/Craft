@@ -17,7 +17,18 @@ export default async function handler(
 	const { name, surname, email, phone, message } = req.body;
 
 	try {
-		// Veritabanına kaydet
+		const existingMail = await prisma.mail.findFirst({
+			where: {
+				name,
+				surname,
+				email,
+			},
+		});
+
+		if (existingMail) {
+			return res.status(409).json({ message: 'Bu kişi zaten var.' });
+		}
+
 		const mail = await prisma.mail.create({
 			data: {
 				name,
@@ -28,21 +39,20 @@ export default async function handler(
 			},
 		});
 
-		// E-posta gönder
 		let transporter = nodemailer.createTransport({
 			service: 'Gmail',
 			auth: {
-				user: 'gmail_adresiniz@gmail.com', // Kendi Gmail adresinizi ekleyin
-				pass: 'gmail_sifreniz', // Gmail şifrenizi veya uygulama şifrenizi ekleyin
+				user: process.env.GMAIL_USER,
+				pass: process.env.GMAIL_PASS,
 			},
 		});
 
 		let mailOptions = {
-			from: '"Web Siteniz" <gmail_adresiniz@gmail.com>', // Gönderen adresi
-			to: 'gedikas@hotmail.com', // Alıcı adresi
-			subject: 'Yeni İletişim Formu Mesajı', // Konu
+			from: 'test343665@gmail.com',
+			to: 'tugaygundem@gmail.com', //Contact sayfasında doldurulan formun gönderileceği mail adresi
+			subject: 'Tugay hocam maillerimiz başladı. Hayırlı olsun :)',
 			html: `
-        <h3>Yeni İletişim Formu Mesajı</h3>
+        <h3>Yeni müşteri potansiyeli mi diyelim ne yazalım hocam </h3>
         <p><strong>İsim:</strong> ${name}</p>
         <p><strong>Soyisim:</strong> ${surname}</p>
         <p><strong>Email:</strong> ${email}</p>
