@@ -59,6 +59,7 @@
 	position: relative;
 	justify-content: flex-start;
 	padding: 4rem;
+	overflow: auto;
 
 	@include respond-to(md) {
 		justify-content: center;

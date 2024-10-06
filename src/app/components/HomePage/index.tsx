@@ -1,10 +1,7 @@
 'use client';
 
-import Link from 'next/link';
-import Arrow from '../../components/DirectionKeys';
 import styles from './styles.module.scss';
 import React from 'react';
-import Button from '../../components/buttons';
 import NavBar from '../../components/navBar';
 
 const HomePage = () => {
@@ -30,7 +27,6 @@ const HomePage = () => {
 						long-lasting solutions to meet the production demands of an
 						ever-changing business environment.
 					</p>
-					<Button text="CONTACT NOW" />
 				</div>
 			</main>
 		</div>

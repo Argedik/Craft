@@ -5,48 +5,49 @@ import React from 'react';
 import NavBar from '../components/navBar';
 import Button from '../components/buttons';
 import ProductTitle from '../components/product/productTitle';
+import Link from 'next/link';
+
+const products = [
+	{
+		id: 'air-wipes',
+		name: 'AIR WIPES',
+		image: '/Rectangle17.png',
+	},
+	{
+		id: 'blades',
+		name: 'BLADES',
+		image: '/Rectangle18.png',
+	},
+	{
+		id: 'stands',
+		name: 'STANDS',
+		image: '/Rectangle19.png',
+	},
+	{
+		id: 'welders',
+		name: 'WELDERS',
+		image: '/Rectangle20.png',
+	},
+];
 
 const Product = () => {
-	function hundleClick() {
-		console.log('test');
-	}
 	return (
 		<div className={styles.container}>
 			<NavBar noImage />
 			<main className={`productPage ${styles.productPage}`}>
 				<div className={styles.productContainer}>
-					<div className={styles.product} onClick={() => hundleClick()}>
-						<ProductTitle text="AIR WIPES" />
-						<img
-							src="/Rectangle17.png"
-							alt="Air Wipes"
-							className={styles.productImage}
-						/>
-					</div>
-					<div className={styles.product}>
-						<ProductTitle text="BLADES" />
-						<img
-							src="/Rectangle18.png"
-							alt="Blades"
-							className={styles.productImage}
-						/>
-					</div>
-					<div className={styles.product}>
-						<ProductTitle text="STANDS" />
-						<img
-							src="/Rectangle19.png"
-							alt="Stands"
-							className={styles.productImage}
-						/>
-					</div>
-					<div className={styles.product}>
-						<ProductTitle text="WELDERS" />
-						<img
-							src="/Rectangle20.png"
-							alt="Welders"
-							className={styles.productImage}
-						/>
-					</div>
+					{products.map((product) => (
+						<Link href={`/product/${product.id}`} key={product.id}>
+							<div className={styles.product}>
+								<ProductTitle text={product.name} />
+								<img
+									src={product.image}
+									alt={product.name}
+									className={styles.productImage}
+								/>
+							</div>
+						</Link>
+					))}
 				</div>
 				<div className={styles.customMachines}>
 					<Button text="CUSTOM MACHINES" />

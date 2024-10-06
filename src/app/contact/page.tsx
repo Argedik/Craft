@@ -55,7 +55,7 @@ const ContactForm: React.FC = () => {
 			<NavBar noImage />
 			<main className={styles.main}>
 				<div className={styles.formContainer}>
-					<div>
+					<div className={styles.formInputs}>
 						<h1 style={{ color: '#01303B' }}>Get in Touch</h1>
 						<p style={{ color: '#01303B' }}>
 							One step closer to discovering products

@@ -8,7 +8,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ className, text }) => {
 	return (
 		<button className={`${styles.contactButton} productButton `}>
-			<p className={`${styles.buttonText}`}>CUSTOM MACHINES</p>
+			<p className={`${styles.buttonText}`}>{text}</p>
 		</button>
 	);
 };
