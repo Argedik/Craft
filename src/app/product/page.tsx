@@ -37,15 +37,17 @@ const Product = () => {
 			<main className={`productPage ${styles.productPage}`}>
 				<div className={styles.productContainer}>
 					{products.map((product) => (
-						<Link href={`/product/${product.id}`} key={product.id}>
-							<div className={styles.product}>
-								<ProductTitle text={product.name} />
-								<img
-									src={product.image}
-									alt={product.name}
-									className={styles.productImage}
-								/>
-							</div>
+						<Link
+							href={`/product/${product.id}`}
+							key={product.id}
+							className={styles.product}
+						>
+							<ProductTitle text={product.name} />
+							<img
+								src={product.image}
+								alt={product.name}
+								className={styles.productImage}
+							/>
 						</Link>
 					))}
 				</div>

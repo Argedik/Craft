@@ -38,13 +38,11 @@
 }
 
 .product {
-	flex: 0 0 45%;
 	margin: 0.5rem;
 	padding: 1rem;
 	text-align: center;
 	background-color: #fff;
 	display: flex;
-	gap: 1rem;
 	flex-direction: column;
 	cursor: pointer;
 	border-radius: 8px;
@@ -63,7 +61,7 @@
 	}
 
 	@include respond-to(sm) {
-		flex: 0 0 45;
+		flex: 0 0 45%;
 	}
 }
 
