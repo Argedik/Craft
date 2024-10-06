@@ -1,9 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import './_variables';
+@import '@styles/_mixins';
 
 * {
 	box-sizing: border-box;
 	padding: 0;
+}
+
+html {
+	font-size: 16px; // 1rem = 16px
+
+	@include respond-to(sm) {
+		font-size: 15px;
+	}
+
+	@include respond-to(xs) {
+		font-size: 14px;
+	}
 }
 
 body {

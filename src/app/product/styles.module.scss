@@ -1,12 +1,134 @@
+@import '@styles/_variables';
+@import '@styles/_mixins';
+
 .container {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	height: 100vh;
-	background: url('/background.jpg') no-repeat center center fixed;
+	// background: url('/background.jpg') no-repeat center center fixed;
 	background-size: cover;
 	position: relative;
 	overflow: hidden;
+}
+
+.productPage {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	justify-content: flex-start;
+	padding: 2rem;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	overflow: auto;
+}
+
+.productContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 2rem;
+
+	@include respond-to(md) {
+		justify-content: center;
+	}
+}
+
+.product {
+	flex: 0 0 45%;
+	margin: 0.5rem;
+	padding: 1rem;
+	text-align: center;
+	background-color: #fff;
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: transform 0.3s ease;
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+
+	@include respond-to(lg) {
+		flex: 0 0 30%;
+	}
+
+	@include respond-to(md) {
+		flex: 0 0 45%;
+	}
+
+	@include respond-to(sm) {
+		flex: 0 0 45;
+	}
+}
+
+.productTitle {
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.productImage {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 0.5rem;
+}
+
+.customMachines {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.customText {
+	margin-top: 1rem;
+	font-size: 0.7rem;
+	color: #555;
+}
+
+@media (max-width: $breakpoint-sm) {
+	.customText {
+		font-size: 0.9rem;
+	}
+}
+
+.backgroundImage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+	z-index: 0;
+}
+
+.nav {
+	display: flex;
+	gap: 80px;
+	justify-content: center;
+
+	@include respond-to(md) {
+		gap: 40px;
+	}
+
+	@include respond-to(sm) {
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+}
+
+.navItem {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: bold;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 .header {
@@ -20,36 +142,6 @@
 	height: 5vh;
 	margin: 0 auto;
 	padding: 0.4rem 0 1.2rem;
-}
-
-.nav {
-	display: flex;
-	gap: 80px;
-	justify-content: center;
-}
-
-.navItem {
-	color: #000;
-	text-decoration: none;
-	cursor: pointer;
-	font-weight: bold;
-}
-
-.navItem:hover {
-	text-decoration: underline;
-}
-
-.productPage {
-	flex: 1;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	justify-content: left;
-	padding: 1rem;
-	flex-wrap: wrap;
-	align-items: start;
-	overflow: auto;
 }
 
 .overlay {
@@ -87,16 +179,6 @@
 	color: #000;
 }
 
-.backgroundImage {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: fill;
-	z-index: 0;
-}
-
 /* Mobil görünüm için medya sorgusu */
 @media (max-width: 768px) {
 	.nav {
@@ -114,42 +196,6 @@
 	}
 }
 
-.productContainer {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	width: 100%;
-	margin-bottom: 2rem;
-}
-
-.product {
-	flex: 0 0 45%;
-	margin: 0.5rem;
-	padding: 1rem;
-	text-align: center;
-	background-color: #fff;
-	display: flex;
-	gap: 1rem;
-	flex-direction: column;
-	cursor: pointer;
-}
-
-.productTitle {
-	font-weight: bold;
-	font-size: 1.2rem;
-}
-
-.productImage {
-	max-width: 100%;
-	height: auto;
-	margin-bottom: 0.5rem;
-}
-
-.customMachines {
-	text-align: center;
-	margin: 0 auto;
-}
-
 .customButton {
 	background-color: #000;
 	color: #fff;
@@ -163,10 +209,4 @@
 
 .customButton:hover {
 	background-color: #333;
-}
-
-.customText {
-	margin-top: 1rem;
-	font-size: 0.7rem;
-	color: #555;
 }

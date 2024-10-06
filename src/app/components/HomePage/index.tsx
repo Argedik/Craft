@@ -20,8 +20,8 @@ const HomePage = () => {
 			<NavBar />
 			<main className={styles.main}>
 				<div className={styles.overlay}>
-					<Arrow direction="left" onClick={handleLeftClick} />
-					<Arrow direction="right" onClick={handleRightClick} />
+					{/* <Arrow direction="left" onClick={handleLeftClick} />
+					<Arrow direction="right" onClick={handleRightClick} /> */}
 					<h1 className={styles.title}>Welcome to Craft Industrial</h1>
 					<p className={styles.subtitle}>
 						Craft Industrial was established to manufacture and supply high
