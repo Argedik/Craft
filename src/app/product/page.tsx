@@ -6,6 +6,7 @@ import NavBar from '../components/navBar';
 import Button from '../components/buttons';
 import ProductTitle from '../components/product/productTitle';
 import Link from 'next/link';
+import Footer from 'app/components/footer';
 
 const products = [
 	{
@@ -58,6 +59,7 @@ const Product = () => {
 					</div>
 				</div>
 			</main>
+			<Footer />
 		</div>
 	);
 };

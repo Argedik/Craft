@@ -3,6 +3,7 @@
 import styles from './styles.module.scss';
 import React from 'react';
 import NavBar from '../../components/navBar';
+import Footer from '../footer';
 
 const HomePage = () => {
 	const handleLeftClick = () => {
@@ -29,6 +30,7 @@ const HomePage = () => {
 					</p>
 				</div>
 			</main>
+			<Footer />
 		</div>
 	);
 };

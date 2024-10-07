@@ -1,6 +1,7 @@
 import styles from './styles.module.scss';
 import React from 'react';
 import NavBar from 'app/components/navBar';
+import Footer from 'app/components/footer';
 
 const About = () => {
 	return (
@@ -45,6 +46,7 @@ const About = () => {
 					<button className={styles.contactButton}>CONTACT NOW</button>
 				</div>
 			</main>
+			<Footer />
 		</div>
 	);
 };

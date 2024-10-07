@@ -6,6 +6,7 @@ import styles from './styles.module.scss';
 import NavBar from '../components/navBar';
 import TextInput from '../components/form/textInput';
 import Button from '../components/buttons';
+import Footer from 'app/components/footer';
 
 const ContactForm: React.FC = () => {
 	const [formData, setFormData] = useState({
@@ -127,6 +128,7 @@ const ContactForm: React.FC = () => {
 					</div>
 				</div>
 			</main>
+			<Footer />
 		</div>
 	);
 };

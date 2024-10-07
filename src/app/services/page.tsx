@@ -4,6 +4,7 @@ import styles from './styles.module.scss';
 import React from 'react';
 import NavBar from '../components/navBar';
 import Button from '../components/buttons';
+import Footer from 'app/components/footer';
 
 const Services = () => {
 	return (
@@ -80,6 +81,7 @@ const Services = () => {
 					</div>
 				</div>
 			</main>
+			<Footer />
 		</div>
 	);
 };
