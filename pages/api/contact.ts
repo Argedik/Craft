@@ -49,7 +49,8 @@ export default async function handler(
 
 		let mailOptions = {
 			from: 'test343665@gmail.com',
-			to: 'tugaygundem@gmail.com', //Contact sayfasında doldurulan formun gönderileceği mail adresi
+			// to: 'tugaygundem@gmail.com', //Contact sayfasında doldurulan formun gönderileceği mail adresi
+			to: 'gedikas@hotmail.com', //Contact sayfasında doldurulan formun gönderileceği mail adresi
 			subject: 'Tugay hocam maillerimiz başladı. Hayırlı olsun :)',
 			html: `
         <h3>Yeni müşteri potansiyeli mi diyelim ne yazalım hocam </h3>
