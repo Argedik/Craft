@@ -1,74 +1,177 @@
 @import "@styles/_variables";
+@import "@styles/_mixins.scss";
 
 .footer {
     background-color: $craft-white;
-    padding: 2rem 0;
     text-align: center;
     z-index: 999;
     color: $craft-color;
 }
 
-.footerContainer {
+.container {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 1rem;
-    align-items: center;
-    gap: 4rem;
+    align-items: flex-start;
+
+    @include respond-to(xs) {
+        margin: 0 2rem;
+    }
 }
 
-.firstContainer {
-    padding: 0;
-    display: flex;
-}
-
-.secondContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footerColumn {
-    flex: 1;
+.column {
+    flex: 0 0 15%;
     margin: 0 1rem;
     text-align: start;
+
+    @include respond-to(xs) {
+        padding: 0 1rem;
+        flex: auto;
+    }
 }
 
-.footerTitle {
+.brand {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: start;
+
+    @include respond-to(xs) {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.title {
     font-weight: bold;
     margin-bottom: 1rem;
     font-size: 2rem;
+    margin: 0;
 }
 
-.footerLink {
+.link {
     color: #333;
     text-decoration: none;
     display: block;
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 2rem;
+
+    @include respond-to(xs) {
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
 }
 
-.footerLink:hover {
+.link:hover {
     text-decoration: underline;
 }
 
-.footerSocial {
+.social {
     margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+
+    @include respond-to(xs) {
+        justify-content: center;
+    }
 }
 
-.footerSocial a {
+.social a {
     margin-right: 1rem;
     color: #333;
 }
 
 @media (max-width: 768px) {
-    .footerContainer {
+    .container {
         flex-direction: column;
         text-align: left;
     }
 
-    .footerColumn {
+    .column {
         margin: 1rem 0;
+    }
+}
+
+.important {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: start;
+}
+
+.address {
+    margin-bottom: 0.25rem;
+}
+
+.icon {
+    @keyframes beat {
+        0%,
+        100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+    }
+    width: 2rem;
+    height: 2rem;
+    animation: beat 1s infinite;
+}
+
+.known {
+    color: $craft-color;
+    font-weight: 100;
+}
+
+.infoLink {
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    margin-right: 0.25rem;
+}
+
+.bracket {
+    margin: 0 0.25rem;
+}
+
+.mobile {
+    display: none;
+
+    @include respond-to(xs) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.25rem;
+        width: calc(100% - 4rem);
+    }
+}
+
+.web {
+    display: block;
+
+    @include respond-to(xs) {
+        display: none;
+    }
+}
+
+.rightContainer {
+    display: none;
+
+    @include respond-to(xs) {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+.hidden {
+    display: block;
+
+    @include respond-to(xs) {
+        display: none;
     }
 }
